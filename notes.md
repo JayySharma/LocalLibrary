@@ -1,0 +1,2 @@
+# To refer later
+1. [Choices for the genre/tags](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Models#:~:text=choices%3A%20A%20group%20of%20choices%20for%20this%20field.%20If%20this%20is%20provided%2C%20the%20default%20corresponding%20form%20widget%20will%20be%20a%20select%20box%20with%20these%20choices%20instead%20of%20the%20standard%20text%20field.)
