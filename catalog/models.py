@@ -1,31 +1,10 @@
 from django.db import models
+
 # Create your models here.
+
 from django.urls import reverse  # To generate URLS by reversing URL patterns
 from django.db.models import UniqueConstraint
 from django.db.models.functions import Lower
-import uuid  # Required for unique book instances
-from datetime import date
-from django.conf import settings  # Required to assign User as a borrower
-# Create your models here.
-# class MyModelName(models.Model):
-#     """A typical class defining a model, derived from the Model class."""
-
-#     # Fields
-#     my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
-#     # …
-
-#     # Metadata
-#     class Meta:
-#         ordering = ['-my_field_name']
-
-#     # Methods
-#     def get_absolute_url(self):
-#         """Returns the URL to access a particular instance of MyModelName."""
-#         return reverse('model-detail-view', args=[str(self.id)])
-
-#     def __str__(self):
-#         """String for representing the MyModelName object (in Admin site etc.)."""
-#         return self.my_field_name
 
 class Genre(models.Model):
     """Model representing a book genre (e.g. Science Fiction, Non Fiction)."""
@@ -110,6 +89,13 @@ class Book(models.Model):
     def __str__(self):
         """String for representing the Model object."""
         return self.title
+
+
+import uuid  # Required for unique book instances
+from datetime import date
+
+from django.conf import settings  # Required to assign User as a borrower
+
 
 class BookInstance(models.Model):
     """Model representing a specific copy of a book (i.e. that can be borrowed from the library)."""
